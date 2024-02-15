@@ -1,0 +1,82 @@
+<mxfile host="65bd71144e">
+    <diagram id="nYtwASQVy9E85j1pXEmz" name="Página-1">
+        <mxGraphModel dx="1182" dy="1825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="SQL(Structured Query Language)" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="-580" y="-740" width="1100" height="800" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;h1&gt;SQL&lt;/h1&gt;&lt;p&gt;A Linguagem de consulta estruturada (SQL) é uma linguagem de consulta popular que é frequentemente usada em todos os tipos de aplicações. Analistas e desenvolvedores de dados aprendem e utilizam a SQL porque ela se integra bem a diferentes linguagens de programação.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="2">
+                    <mxGeometry x="10" y="50" width="250" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="edgeStyle=none;html=1;" edge="1" parent="2" source="4" target="8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="edgeStyle=none;html=1;" edge="1" parent="2" source="4" target="12">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="edgeStyle=none;html=1;" edge="1" parent="2" source="4" target="12">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="2" source="4" target="16">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="2" source="4" target="17">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="2" source="4" target="19">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="SQL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="2">
+                    <mxGeometry x="520" y="60" width="370" height="54" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="edgeStyle=none;html=1;" edge="1" parent="2" source="8" target="23">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="DQL" style="whiteSpace=wrap;html=1;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;rounded=1;" vertex="1" parent="2">
+                    <mxGeometry x="520" y="150" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="" style="edgeStyle=none;html=1;" edge="1" parent="2" source="12" target="25">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="DML" style="whiteSpace=wrap;html=1;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;rounded=1;" vertex="1" parent="2">
+                    <mxGeometry x="600" y="156" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="edgeStyle=none;html=1;" edge="1" parent="2" source="16" target="27">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="DDL" style="whiteSpace=wrap;html=1;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;rounded=1;" vertex="1" parent="2">
+                    <mxGeometry x="675" y="156" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="" style="edgeStyle=none;html=1;" edge="1" parent="2" source="17" target="30">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="DCL" style="whiteSpace=wrap;html=1;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;rounded=1;" vertex="1" parent="2">
+                    <mxGeometry x="760" y="156" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="" style="edgeStyle=none;html=1;" edge="1" parent="2" source="19" target="32">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="DTL" style="whiteSpace=wrap;html=1;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;rounded=1;" vertex="1" parent="2">
+                    <mxGeometry x="840" y="156" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="SELECT" style="whiteSpace=wrap;html=1;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;rounded=1;" vertex="1" parent="2">
+                    <mxGeometry x="510" y="240" width="70" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="INSERT&lt;br&gt;UPDATE&lt;br&gt;DELETE" style="whiteSpace=wrap;html=1;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;rounded=1;" vertex="1" parent="2">
+                    <mxGeometry x="600" y="240" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="CREATE&amp;nbsp;&lt;br&gt;ALTER&lt;br&gt;DROP" style="whiteSpace=wrap;html=1;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;rounded=1;" vertex="1" parent="2">
+                    <mxGeometry x="675" y="240" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="GRANT&amp;nbsp;&lt;br&gt;REVOKE" style="whiteSpace=wrap;html=1;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;rounded=1;" vertex="1" parent="2">
+                    <mxGeometry x="760" y="240" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="BEGIN&lt;br&gt;COMMIT&lt;br&gt;ROLLBACK&amp;nbsp;" style="whiteSpace=wrap;html=1;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;rounded=1;" vertex="1" parent="2">
+                    <mxGeometry x="830" y="250" width="80" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

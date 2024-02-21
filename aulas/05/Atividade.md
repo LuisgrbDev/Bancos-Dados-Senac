@@ -11,10 +11,31 @@ Exercício:
 Com base no contexto apresentado, identifique as entidades e seus relacionamentos. Em seguida, elabore um modelo conceitual que represente as relações entre essas entidades.
 
 Entidades:
-(listar aqui)
+**Curso**
+
+**Aluno**
+
+**Professor**
+
+**Disciplina**
+
+**matricula**
 
 Relacionamentos
-(listar aqui)
+
+**Um curso pode ter N Disciplinas;**
+
+**Uma disciplina pode pertencer em N cursos;**
+
+**Um curso pode ter N alunos;**
+
+**Um aluno pode se matricular em N cursos;**
+
+**Uma disciplina pode ser ministrada por N professores;**
+
+**Um aluno realiza uma ou mais matriculas;**
+
+**Uma matricula esta associada a um aluno e um curso;**
 
 Agora, com base nessas entidades e relacionamentos, desenvolva um modelo conceitual no DrawIO representando visualmente a estrutura e as interações entre esses elementos.
 
@@ -23,7 +44,33 @@ Agora, com base nessas entidades e relacionamentos, desenvolva um modelo conceit
 A transição do modelo conceitual para o modelo lógico envolve a representação mais específica das entidades, atributos, relacionamentos e chaves no contexto de um Sistema de Gestão Acadêmica.
 
 Tabelas:
-(listar)
+**Curso**
+id(PK) - nome - data
+
+**Aluno**
+
+ra (pk) - nome, cpf
+
+**Professor**
+
+ra_professor (pk) - nome, cpf
+
+**Disciplina**
+
+id (pk)- nome
+
+**curso_Disciplina** 
+
+curso_ID (FK) e disciplina_ID (FK)
+
+**Professor_Disciplinas**
+
+Professor_ID (FK), Disciplina_ID(FK)
+
+**Matricula**
+
+aluno_ID (FK) e curso_ID (FK)
+data_matricula
 
 Chaves Primárias e Estrangeiras:
 (listar)

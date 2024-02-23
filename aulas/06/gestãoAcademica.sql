@@ -1,10 +1,6 @@
 -- Criação do Banco de Dados
 CREATE DATABASE GestaoAcademica;
 
--- CREATE DATABASE IF NOT EXISTS GestaoAcademica;
--- DROP DATABASE GestaoAcademica;
-
--- Seleção do Banco de Dados
 USE GestaoAcademica;
 
 CREATE TABLE IF NOT EXISTS Curso (

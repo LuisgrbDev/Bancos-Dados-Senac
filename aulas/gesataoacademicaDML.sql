@@ -35,7 +35,7 @@ INSERT INTO matricula(aluno_ID, Curso_ID,data_matricula) values
 (3,5, '2022-09-11');
 
 
-SELECT * FROM disciplina;
+SELECT * FROM professor;
 
 -- Cadastre 5 professores e 3 disciplinas
 -- associe cada professro a ao menos uma disciplina
@@ -60,14 +60,31 @@ INSERT INTO  professor_disciplina VALUES
 (4,2),
 (5,1),
 (5,3),
-(2,3),
+(2,3), 	
 (1,3);
 
+-- DDL UPDATE
+
+UPDATE professor
+SET especializacao = 'Medicina' 
+WHERE id = 4;
+
+select * from disciplina;
+
+UPDATE disciplina
+SET nome = 'Matematica 2', Horas = 80 
+WHERE id = 3;
+
+UPDATE disciplina
+SET nome = 'Logica de Programação', Horas = 95
+WHERE id = 2;
+
+UPDATE disciplina
+SET  Horas = 40
+WHERE horas > 40;
 
 
+-- DML DELETE
 
-
-
-
-
+DELETE FROM disciplina WHERE id = 3;
 

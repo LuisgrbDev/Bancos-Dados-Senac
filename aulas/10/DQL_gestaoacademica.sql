@@ -48,3 +48,9 @@ SELECT COUNT(*) AS QuantidadeDeMatricula FROM matricula WHERE curso_ID = 2;
 -- EXEMPLO: Selecionar professor com especializção que envolva Tecnologia
 
 SELECT * FROM professor WHERE especializacao LIKE '%gia%';
+
+-- SELECIONE TODOS OS CURSOS QUE TERMINEM COM 'MEDICINA' OU COMECEM COM A LETRA 'D'
+SELECT * FROM curso WHERE nome LIKE '%medicina' or nome LIKE 'D%';
+
+-- Utilizando Distinct para obter valores Distintos
+SELECT DISTINCT ESPECIALIZACAO FROM PROFESSOR;

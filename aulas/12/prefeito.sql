@@ -25,8 +25,9 @@ SELECT * FROM PREFEITO;
  ('VILA PRUDENTE', 1, 3);
  
  
- SELECT CIDADE.nome AS NomeCidade, PREFEITO.nome AS NomePrefeito
+ SELECT CIDADE.nome AS NomeCidade, PREFEITO.nome AS NomePrefeito, ESTADO.UF AS UF
  FROM CIDADE
- INNER JOIN prefeito ON CIDADE.prefeito_id = prefeito.id;
+ LEFT JOIN prefeito ON CIDADE.prefeito_id = prefeito.id
+ INNER JOIN estado ON CIDADE.estado_id = estado.id;
  
 

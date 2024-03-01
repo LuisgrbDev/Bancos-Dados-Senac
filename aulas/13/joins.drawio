@@ -1,0 +1,61 @@
+<mxfile host="65bd71144e">
+    <diagram id="miV85nwJ3ijPOsIxuDpS" name="Página-1">
+        <mxGraphModel dx="837" dy="1124" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="14" value="RIGHT" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fillOpacity=100;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="1000" width="140" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="LEFT" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;fillOpacity=57;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="215" width="140" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="RIGHT" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;fillOpacity=70;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="215" width="140" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;h1&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;LEFT and RIGHT&lt;/span&gt;&lt;/h1&gt;&lt;h1&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Ao selecionar uma tabel para uma relação inicial (SELECT * FROM TABELA), entenda essa como tabela da esquerda (LEFT) . A tabela a ser associada, será a da direita (RIGHT)&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="430" y="170" width="290" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="LEFT" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;fillOpacity=57;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="480" width="140" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="RIGHT" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;fillOpacity=70;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="480" width="140" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;INNER&lt;/font&gt;" style="text;html=1;strokeColor=#2D7600;fillColor=#f54139;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="540" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="&lt;h1&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font color=&quot;#ff3333&quot;&gt;INNER JOIN&lt;/font&gt;&lt;/span&gt;&lt;/h1&gt;&lt;h1&gt;&lt;span style=&quot;font-size: 16px; font-weight: 400;&quot;&gt;INNER JOIN é uma forma de pesquisa filtrada que tras tudo aquilo pedido no select.&lt;/span&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="430" y="450" width="290" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="LEFT" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;fillOpacity=100;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="740" width="140" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="RIGHT" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=none;fillOpacity=70;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="740" width="140" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="&lt;h1&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font color=&quot;#65a820&quot;&gt;LEFT JOIN&lt;/font&gt;&lt;/span&gt;&lt;/h1&gt;&lt;h1&gt;&lt;span style=&quot;font-size: 16px; font-weight: 400;&quot;&gt;LEFT&amp;nbsp; JOIN junta tudo o que são comparados nas duas tabelas e tambem tras tudo da tabela das esquerda&lt;/span&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="414" y="720" width="290" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="LEFT" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=none;fillOpacity=100;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="1000" width="140" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="&lt;h1&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font color=&quot;#429fe0&quot;&gt;RIGHT JOIN&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/h1&gt;&lt;h1&gt;&lt;span style=&quot;font-size: 16px; font-weight: 400; background-color: initial;&quot;&gt;RIGHT JOIN junta tudo o que são comparados nas duas tabelas e tambem tras tudo da tabela da direita&lt;/span&gt;&lt;br&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="414" y="970" width="290" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="RIGHT" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fillOpacity=100;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="1230" width="140" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="LEFT" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ba1e2;fillOpacity=100;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="1230" width="140" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="&lt;h1&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font color=&quot;#429fe0&quot;&gt;FULL JOIN&lt;/font&gt;&lt;/span&gt;&lt;/h1&gt;&lt;h1&gt;&lt;span style=&quot;background-color: initial; font-size: 16px; font-weight: 400;&quot;&gt;FULL JOIN&amp;nbsp; tras a comparação completa de toda a tabela desde as aquelas que tem comparação e tambem as que naão tem&lt;/span&gt;&lt;br&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="414" y="1210" width="290" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="&lt;font style=&quot;font-size: 32px;&quot;&gt;INNER, LEFT, RIGHT E FULL JOIN&lt;/font&gt;" style="text;strokeColor=#3700CC;fillColor=#6a00ff;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="30" width="520" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

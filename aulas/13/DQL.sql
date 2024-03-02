@@ -32,8 +32,9 @@ RIGHT JOIN estado ON cidade.estado_id = estado.id;
 -- PARA TODAS AS CIDADES QUE TEM PREFEITO
 
 
+SELECT * FROM CIDADE;
 
 SELECT cidade.nome AS CIDADE, estado.uf AS UF, prefeito.nome AS PREFEITO, prefeito.dataposse AS DATA_POSSE
 FROM cidade
-INNER JOIN ESTADO ON cidade.estado_id = estado.id 
+LEFT JOIN ESTADO ON cidade.estado_id = estado.id 
 INNER JOIN prefeito on cidade.Prefeito_ID = prefeito.id;

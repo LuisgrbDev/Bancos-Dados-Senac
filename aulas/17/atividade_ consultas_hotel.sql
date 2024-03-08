@@ -195,7 +195,40 @@ VALUES
     
 -- Selecione todos os itens que contenham "de" na descrição, pulando os 2 primeiros resultados
 
-SELECT * FROM item WHERE descricaoitem LIKE '%de%'LIMIT 100 OFFSET 2;
+	
+    SELECT * FROM item WHERE descricaoitem LIKE '%de%'LIMIT 100 OFFSET 2;
+
+
+# Consultas com JOINS
+-- Selecioar detalhes da hospedagem, incluindo informações do cliente
+
+	SELECT cliente.*,hospedagem.dataInicio, hospedagem.dataFim,hospedagem.ValorFinal,hospedagem.qtdPessoas FROM hospedagem 
+    JOIN CLIENTE ON hospedagem.codCliente = cliente.codCliente;
+
+-- Selecionar chalés com os itens associados
+SELECT*FROM CHALE_ITEM;
+
+SELECT chale.*, item.nomeItem 
+FROM chale
+LEFT JOIN chale_item ON chale.codChale = chale_item.codChale 
+LEFT JOIN item ON chale_item.nomeItem = item.nomeItem;
+  
+	
+-- Selecionar serviços utilizados em uma hospedagem
+	
+    SELECT servico.nomeServico, hospedagem_servico.* FROM servico
+    JOIN hospedagem_servico ON servico.codServico = hospedagem_servico.codServico
+    WHERE hospedagem_servico.codHospedagem = 1;
+
+-- Consultar os clientes com seus telefones
+	
+    SELECT cliente.nomeCliente, cliente.enderecoCliente, cliente.estadoCliente,telefone.tipoTelefone , telefone.telefone FROM CLIENTE
+    JOIN TELEFONE ON cliente.codCliente = telefone.codCliente;
+
+-- Selecionar chalés ocupados em uma data específica
+SELECT chale.*, hospedagem.* FROM hospedagem
+JOIN CHALE ON chale.codChale = hospedagem.codChale
+WHERE '2024-03-07' BETWEEN hospedagem.dataInicio AND hospedagem.dataFim;
 
 
 

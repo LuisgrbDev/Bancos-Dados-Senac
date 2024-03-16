@@ -1,5 +1,5 @@
 USE sistema_vendas;
-
+DROP DATABASE SISTEMA_VENDAS;
 ################## DDL
 -- 1. Crie uma tabela chamada Fornecedor para armazenar informações sobre os fornecedores do sistema.
 -- id, nome, endereço, telefone, email e uma observação (text)
@@ -53,15 +53,16 @@ INSERT INTO FormaPagamento (Nome, descricao, UsuarioAtualizacao) VALUES
 
 INSERT INTO produto (Nome, descricao, Preco, CategoriaID, UsuarioAtualizacao)
 VALUES ('Smartphone XYZ', 'Smartphone com 128GB de memória e câmera de 48MP', 2500.00, 1 , 1),
-('O Apanhador no Campo de Centeio', 'Livro clássico da literatura americana', 59.90, 2, 2),
 ('Bicicleta Montanheira', 'Bicicleta ideal para trilhas e terrenos irregulares', 1200.00, 3, 3),
 ('Guitarra Elétrica Fender', 'Guitarra elétrica modelo Stratocaster', 7800.00, 4, 4),
  ('Mochila de Viagem 70L', 'Mochila resistente e espaçosa para longas viagens', 450.00, 5, 5),
-  ('Mochila de Viagem 30L', 'Mochila resistente para longas viagens', 45.00, 5, 5),
- ('Caneca Personalizada', 'Caneca com estampas personalizadas.', 25.00, 1, 1),
- ('Caderno Ecológico', 'Caderno feito de material reciclado.', 15.90, 2, 1),
- ('Garrafa Sustentável', 'Garrafa reutilizável com material sustentável.', 30.00, 3, 1);
+  ('Mochila de Viagem 30L', 'Mochila resistente para longas viagens', 45.00, 5, 5)
 ;
+INSERT INTO produto (Nome, descricao, Preco) VALUES 
+('Caneca Personalizada', 'Caneca com estampas personalizadas.', 25.00),
+ ('Caderno Ecológico', 'Caderno feito de material reciclado.', 15.90),
+ ('Garrafa Sustentável', 'Garrafa reutilizável com material sustentável.', 30.00),
+('O Apanhador no Campo de Centeio', 'Livro clássico da literatura americana', 59.90); 
 
 INSERT INTO cliente (Nome,email,telefone,usuarioAtualizacao) VALUES
 ('Luis Gustavo','luis@gmail.com','11978918311',1),
@@ -126,13 +127,13 @@ SELECT * FROM produto ORDER BY preco DESC;
 
 SELECT DISTINCT nome FROM categoria;
 
--- 6. Selecione os produtos da tabela Produto cujo preço esteja entre $10 e $50:
-SELECT nome, preco FROM produto WHERE preco BETWEEN  10 and 50;
+-- 6. SELECT os produtos FROM tabela Produto WHERE preço esteja BETWEEN $10 e $50:
+SELECT * FROM produto WHERE preco BETWEEN  10 and 50;
 
 -- 7. Selecione os produtos da tabela Produto, mostrando o nome como "Nome do Produto" e o preço como "Preço Unitário":
  SELECT nome AS NomedoProduto, preco AS PrecoUnitário FROM produto;
 
--- 8. Selecione os produtos da tabela Produto, adicionando uma coluna calculada "Preço Total" multiplicando a quantidade pelo preço:
+-- 8. SELECT os produtos da tabela Produto, adicionando uma coluna calculada "Preço Total" multiplicando a quantidade pelo preço:
 
 SELECT *, (preco * 2) AS PreçoTotal FROM produto;
 
@@ -180,31 +181,63 @@ RIGHT JOIN produto ON itempedido.produtoid = produto.ID;
 ############### DQL com joins e demais filtros
 -- 1. Selecione o nome da categoria e o número de produtos nessa categoria, apenas para categorias com mais de 5 produtos:
 
+-- EQUECI QUE DAVA PARA AGRUPAR OS RESULTADOS E TIVE QUE CONSULTAR AS ATIVIDADES
+SELECT CATEGORIA.nome, COUNT(*) AS ProdutosPorCategoria FROM produto
+JOIN categoria ON PRODUTO.categoriaID = CATEGORIA.id GROUP BY categoria.nome HAVING ProdutosPorCategoria >= 2;
+-- Não tem produto categoria com mais de 5 produtos por isso maior igual a 2  para mostrar resultado
 
 -- 2. Selecione o nome do cliente e o total de pedidos feitos por cada cliente:
 
+SELECT CLIENTE.nome,SUM(itempedido.QUANTIDADE) AS TotalDePedidos FROM CLIENTE
+JOIN pedido ON CLIENTE.id = PEDIDO.clienteid 
+JOIN itempedido ON PEDIDO.ID = itempedido.pedidoId GROUP BY Cliente.id;
 
 -- 3. Selecione o nome do produto, o nome da categoria e a quantidade total de vendas para cada produto:
 
+SELECT produto.nome AS Produto, categoria.nome AS Categoria, sum(itempedido.quantidade) AS TotalVendas FROM produto
+JOIN categoria ON produto.categoriaid = categoria.id
+JOIN itempedido ON produto.id = itempedido.produtoID GROUP BY produto.nome;
 
 -- 4. Selecione o nome da categoria, o número total de produtos nessa categoria e o número de pedidos para cada categoria:
 
+SELECT categoria.nome AS Categoria, COUNT(produto.categoriaID) AS TotalProduto, SUM(itempedido.produtoID) AS TotalVendas FROM categoria
+JOIN produto ON produto.categoriaID = categoria.id 
+JOIN  itempedido ON produto.id = itempedido.ProdutoId GROUP BY categoria.nome;
 
 -- 5. Selecione o nome do cliente, o número total de pedidos feitos por esse cliente e a média de produtos por pedido, apenas para clientes que tenham feito mais de 3 pedidos:
 
+SELECT cliente.nome AS Cliente, SUM(itempedido.quantidade) AS TotalPedido,AVG(itempedido.quantidade) AS MediaProdutoPedido  FROM CLIENTE
+JOIN pedido ON cliente.id = pedido.clienteID
+JOIN itempedido ON pedido.id = itempedido.pedidoID GROUP BY cliente.nome HAVING TotalPedido >= 3;
+-- NÃO TEM MAIS QUE 3 PEDIDOS POR ISSO ESTA MAIOR OU IGUAL
 
 ##### Crie uma View qualquer para qualquer um dos joins desenvolvidos
+CREATE VIEW ProdutoCategoria AS
+SELECT PRODUTO.nome AS NomeProduto, CATEGORIA.nome AS Categoria FROM produto 
+JOIN categoria ON PRODUTO.categoriaID = CATEGORIA.ID; 
+
+SELECT * FROM ProdutoCategoria;
 
 ##### Crie uma transaction que cadastra um cliente e faça uma venda
 -- Início da transação
-
+START TRANSACTION;
 -- Inserir um novo cliente
-
-
+INSERT INTO cliente (Nome,email,telefone,usuarioAtualizacao) VALUES 
+('Ariana Grande','eternalsunshine@gmail.com','11987654321',9);
+SET @NovoCliente = last_insert_id();
 -- Inserir um novo pedido para o cliente
-
+INSERT INTO Pedido (ClienteId, DataPedido, FormaPagamentoId, status, UsuarioAtualizacao)
+VALUES 
+(@novoCliente, CURRENT_DATE(), 1, 'Processando', 9);
+SET @NovoPedido = last_insert_id();
 
 -- Inserir itens no pedido
+INSERT INTO ItemPedido (PedidoId, ProdutoId, Quantidade, UsuarioAtualizacao)
+VALUES (@novoPedido, 1, 2, 1);
 
+COMMIT;
 
+SELECT * FROM CLIENTE;
+SELECT * FROM PEDIDO;
+SELECT * FROM ITEMPEDIDO;
 -- Commit da transação (confirmação das alterações)	
